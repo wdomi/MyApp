@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- git pull https://github.com/wdomi/MyApp.git -->
-<!-- git push https://github.com/wdomi/MyApp.git -->
+<!-- git push --set-upstream https://github.com/wdomi/MyApp.git master -->
 
 <html lang="en">
 
