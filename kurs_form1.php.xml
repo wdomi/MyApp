@@ -1,0 +1,9 @@
+<!-- This is a 'POST' form to fill in (HTML) -->
+
+<form action='ausgabe1.php' method='post'>
+	Vorname:	<input name='vorname' value='YourName'>
+	Nachname:	<input name='nachname'>
+				<input type='submit'>
+			 
+</form>
+			 

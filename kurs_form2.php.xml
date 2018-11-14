@@ -1,0 +1,10 @@
+<!-- This is a 'GET' form to fill in (HTML) -->
+
+<form action='ausgabe2.php' method='get'>
+	Vorname:	<input name='vorname' value='YourName'>
+	Nachname:	<input name='nachname'>
+				<input type='submit'>
+			 
+</form>
+			 
+<!-- With 'get' the values are shown in the url, url can only be a certain length otherwise they rise a, 'error' -->
