@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- git pull https://github.com/wdomi/MyApp.git -->
+<!-- //git pull https://github.com/wdomi/MyApp.git -->
 <!-- git push --set-upstream https://github.com/wdomi/MyApp.git master -->
 
 <html lang="en">
