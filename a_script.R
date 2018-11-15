@@ -1,19 +1,20 @@
-################################################################################ 
-#                                                                              #
+################################################################################# 
+#                                                                               #
 #!                             DATA PROCESSING                                  #
-#                                                                              #
-# This script takes the data as exported from FileMaker and turns it into      #
-# something that can be used for other analyses                                #
-#                                                                              #
-# In short, it                                                                 #
-#* - Corrects typos and recodes missing values                                 #
-#  - Calculates lifespan                                                       #
-#? - Adds father and mother IDs                                                #
-#  - Calculates maternal and paternal age                                      #
-#  - Calculates age at first and last reproduction                             #
-#  - Calculates lifetime reproductive success based on all offspring and       #
-#-   on married offspring                                                      ##                                                                              #
-################################################################################
+#                                                                               #
+# This script takes the data as exported from FileMaker and turns it into       #
+# something that can be used for other analyses                                 #
+#                                                                               #
+# In short, it                                                                  #
+#*  - Corrects typos and recodes missing values                                 #
+#   - Calculates lifespan                                                       #
+#?  - Adds father and mother IDs                                                #
+#   - Calculates maternal and paternal age                                      #
+#   - Calculates age at first and last reproduction                             #
+#   - Calculates lifetime reproductive success based on all offspring and       #
+#-    on married offspring                                                      #
+#// - creates a visual pedigree                                                 #
+#################################################################################
 
 ################
 #+ Import data #
