@@ -8,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
 
-        <title>This is my Homepage</title>
+        <title>This is my Webpage</title>
 
         <!-- // + ---------- Upload files (CSS, JavaScript, PHP,...) ---------- -->
         <script type="text/javascript" src="d3.min.js">
@@ -28,9 +28,16 @@
 
             p {
                 font-family: sans-serif;
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 14px;
                 color: limegreen;
+            }
+
+            p2 {
+                font-family: sans-serif;
+                font-size: 14px;
+                line-height: 14px;
+                color: blue;
             }
         </style>
 
@@ -38,23 +45,18 @@
 
     <body>
 
-        <h1> This is my first page title </h1>
+        <h1> This is my page title </h1>
 
         <p> Hello my <em>friend</em>, this is my <strong>first</strong> paragraph!
             <br> <br>
-
-            <?php # ----- This is my first PHP element -----
-            echo 'Oh my, it works!!', '<br>', 'Tumbs up, whoop whoop!';
-            ?>
-
         </p>
 
         <p> This is today's date generated with php:
-            <table bgcolor='lightgrey'>
+            <table bgcolor='lightgreen'>
                 <tr>
                     <td>
                         <?php
-                        echo date('d.m.Y'), '.';  // this gives today's date in PHP
+                        echo date('d.m.Y');  // this gives today's date in PHP
                         ?>
                     </td>
                 </tr>
@@ -63,36 +65,27 @@
 
         <hr> <!-- --------------- this is a line ----------------------- -->
 
-        <p> This is my first list.
-            <dl> Things to do:</dl>
-            <li> Rejoy</li>
-            <li> Envy </li>
-            <li> Smile </li>
-            <li> Relax </li>
-        </p>
+        <p2> This is a SVG vector graphic visual <br>
+            <svg width="720" height="120">
+                <circle cx="40" cy="60" r="10"></circle>
+                <circle cx="80" cy="60" r="10"></circle>
+                <circle cx="120" cy="60" r="10"></circle>
+            </svg>
 
-        <!-- My first SVG vector graphic visual -->
-        <svg width="720" height="120">
-            <circle cx="40" cy="60" r="10"></circle>
-            <circle cx="80" cy="60" r="10"></circle>
-            <circle cx="120" cy="60" r="10"></circle>
-        </svg>
+            <script language="JavaScript">
+                var circle = d3.selectAll("circle");
+                circle.style("fill", "steelblue");
+                circle.attr("r", 30);
+                circle.attr("cx", function() {
+                    return Math.random() * 720;
+                });
+            </script>
+        </p2>
 
-        <script language="JavaScript">
-            var circle = d3.selectAll("circle");
-            circle.style("fill", "steelblue");
-            circle.attr("r", 30);
-            circle.attr("cx", function() {
-                return Math.random() * 720;
-            });
-        </script>
-
-        <hr> <!-- --------------- this is a line ----------------------- -->
-        <?php include('conf/config.php'); ?>
+        <?php 
+        include 'element_footer.php';
+        ?>
 
     </body>
-
-    <?php include 'element_footer.php' ?>
-
 
 </html>
