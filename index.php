@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- //git pull https://github.com/wdomi/MyApp.git -->
+<!-- git pull https://github.com/wdomi/MyApp.git -->
 <!-- git push --set-upstream https://github.com/wdomi/MyApp.git master -->
 
 <html lang="en">
@@ -81,6 +81,14 @@
                 });
             </script>
         </p2>
+
+        <br>
+        <hr> <!-- --------------- this is a line ----------------------- -->
+
+
+        <?php
+        include 'connection_myappDB.php';
+        ?>
 
         <?php 
         include 'element_footer.php';
