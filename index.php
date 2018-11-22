@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<!-- git pull https://github.com/wdomi/MyApp.git -->
-<!-- git push --set-upstream https://github.com/wdomi/MyApp.git master -->
+<!--//* cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/myapp -->
+<!--//* git pull https://github.com/wdomi/MyApp.git -->
+<!--//* git push --set-upstream https://github.com/wdomi/MyApp.git master -->
+<!-- cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/etc -->
+<!-- git pull https://github.com/wdomi/XAMPP_configFiles.git -->
+<!-- git push --set-upstream https://github.com/wdomi/XAMPP_configFiles.git master -->
+
 
 <html lang="en">
 
