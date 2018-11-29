@@ -39,13 +39,18 @@
         
         <p1> Extract of <em>individuals</em> table: <br>
             <?php 
-            include 'php/db_show_tab_indiv.php'; 
+                include 'php/db_show_tab_indiv.php'; 
             ?>
             <br>
+
             Extract of <strong>removed</strong> records in the <em>individuals</em> table: <br>
             <?php 
-            include 'php/db_show_tab_indivDEL.php'; 
+                include 'php/db_show_tab_indivDEL.php'; 
             ?>
+            <br>
+            <a href="populations.php">See populations table</a><br>
+            <a href="samples.php">See samples table</a><br>
+            
         </p1>
 
         <br>

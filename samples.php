@@ -37,15 +37,20 @@
 
         <hr> <!-- --------------- TABLES INDIVIDUALS ----------------------- -->
         
-        <p1> Extract of <em>individuals</em> table: <br>
+        <p1> Extract of <em>samples</em> table: <br>
             <?php 
-            include 'php/db_show_tab_indiv.php'; 
+                include 'php/db_show_tab_sampl.php'; 
             ?>
             <br>
-            Extract of <strong>removed</strong> records in the <em>individuals</em> table: <br>
+
+            Extract of <strong>removed</strong> records in the <em>samples</em> table: <br>
             <?php 
-            include 'php/db_show_tab_indivDEL.php'; 
+                include 'php/db_show_tab_samplDEL.php'; 
             ?>
+            <br>
+            <a href="populations.php">See populations table</a><br>
+            <a href="individuals.php">See samples table</a><br>
+            
         </p1>
 
         <br>
