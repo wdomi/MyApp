@@ -47,7 +47,7 @@ while($row=$query->fetch()){
 		 <td>$age</td>
          <td>$pop</td>
          <td>$del</td>
-		 <td><a href='php/hide_ind.php?id=$id'> remove </td>
+         <td><a href='php/hide_ind.php?id=$id'> remove </a></td>
 		</tr>";
 }	
 echo "</table>";	

@@ -14,7 +14,8 @@ $query=$conn->prepare($sql);
 $query->execute(['id' => $id]);
 
 // output on webpage
-echo "The record has been removed";
-
+echo "The record has been removed <br>";
 
 ?>
+
+<a href='../samples.php'>back</a>

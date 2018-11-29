@@ -14,7 +14,8 @@ $query=$conn->prepare($sql);
 $query->execute(['id' => $id]);
 
 // output on webpage
-echo "The record has been restored";
+echo "The record has been restored <br>";
 
 
 ?>
+<a href='../individuals.php'>back</a>

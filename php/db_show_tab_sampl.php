@@ -48,7 +48,7 @@ while($row=$query->fetch()){
 		 <td>$cooe</td>
          <td>$iname</td>
          <td>$del</td>
-		 <td><a href='php/hide_sam.php?id=$id'> remove </td>
+		 <td><a href='php/hide_sam.php?id=$id'> remove</a> </td>
 		</tr>";
 }	
 echo "</table>";	
