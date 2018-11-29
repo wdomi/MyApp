@@ -48,10 +48,11 @@ while($row=$query->fetch()){
 		 <td>$age</td>
          <td>$pop</td>
          <td>$del</td>
+         <td><a href='php/unhide_ind.php?id=$id'> restore </td>
          </tr>";
 }	
 
-//      <td><a href='php/hide_ind.php?id=$id'> remove </td>
+//      
 
 echo "</table>";	
 ?>
