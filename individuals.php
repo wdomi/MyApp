@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 
-<!-- Git commands
-    //* cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/myapp
-    //* git pull https://github.com/wdomi/MyApp.git
-    //* git push --set-upstream https://github.com/wdomi/MyApp.git master
-    cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/etc
-    git pull https://github.com/wdomi/XAMPP_configFiles.git
-    git push --set-upstream https://github.com/wdomi/XAMPP_configFiles.git master 
--->
-
 <!--    //* other needed files are in folders: 
         //* php files       ==>  folder  "php"
         //* css files       ==>  folder  "css"
         //* database files  ==>  folder  "config"
+        //° git upload/download commands in README.sh
 -->
 
 <html lang="en">

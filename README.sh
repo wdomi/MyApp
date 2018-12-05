@@ -34,3 +34,10 @@ git push --set-upstream https://github.com/wdomi/Pedigree.git master
 # cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pedigree
 # git pull https://github.com/wdomi/Pedigree.git
 
+
+
+
+
+
+
+
