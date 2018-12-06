@@ -35,8 +35,7 @@
                 include 'php/db_show_tab_indivDEL.php';
             ?>
             <br>
-            <a href="populations.php">See populations table</a><br>
-            <a href="samples.php">See samples table</a><br>
+            
         </p1>
         
 

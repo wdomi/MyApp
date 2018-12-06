@@ -78,4 +78,6 @@
         echo "</table><br>";	
     ?>
 
+    <a href="populations.php">See populations table</a><br>
+    <a href="samples.php">See samples table</a><br>
 </html>
