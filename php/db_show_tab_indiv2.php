@@ -7,11 +7,11 @@
         $php_self = $_SERVER['PHP_SELF']; //This is the filename of the currently executing script, relative to the document root providing path information.
 
         //? message for removed record
-        if ($_GET['id']){
-            $did=$_GET['id'];
-            $sql_indiv = "SELECT * FROM individual WHERE id=:id";
+        if ($_GET['del_id']){
+            $did=$_GET['del_id'];
+            $sql_indiv = "SELECT * FROM individual WHERE id=:del_id";
             $select_indiv = $conn->prepare($sql_indiv);
-            $select_indiv->execute(['id' => $did]);
+            $select_indiv->execute(['del_id' => $did]);
             $indiv = $select_indiv->fetch();
             $id = $indiv['id'];
             $name = $indiv['name'];
@@ -20,7 +20,6 @@
             $remove_indiv = $conn->prepare($remove);
             $remove_indiv->execute(['id' => $did]);
             echo "<em>$name (ID $id) has been removed!</em><br><br>";
-            echo "1:$did, 2:$sql_indiv, 3:$select_indiv, 4:$indiv, 5:$id, 6:$name";
         }
 
         //* Show all records
@@ -42,9 +41,11 @@
 
 
         //* Heading of table, plot data
+        echo "$did <br> $name<br>$php_self<br>'$php_self?id=$id'<br><br>";
         echo "Extract of individuals table: <br>";
         echo "<table border='1'>	
             <tr>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Sex</th>
                 <th>Year of birth</th>
@@ -63,6 +64,7 @@
         $pop      = $row['pname'];
         $del      = $row['deleted'];
         echo "<tr>
+                <td>$id</td>
                 <td>$name</td>
                 <td>$sex</td>
                 <td>$year</td>
@@ -70,7 +72,7 @@
                 <td>$pop</td>
                 <td>$del</td>
                 <td>
-                    <a href='$php_self?id=$id'> remove </a>
+                    <a href='$php_self?del_id=$id'> remove </a>
                 </td>
                 </tr>";
         }	
