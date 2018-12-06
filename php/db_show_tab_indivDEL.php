@@ -9,33 +9,33 @@
         //? message for restored record
         if ($_GET['res_id']){
             $rid=$_GET['res_id'];
-            $sql_indiv = "SELECT * FROM individual WHERE id=:res_id";
-            $select_indiv = $conn->prepare($sql_indiv);
-            $select_indiv->execute(['res_id' => $rid]);
-            $indiv = $select_indiv->fetch();
-            $id = $indiv['id'];
-            $name = $indiv['name'];
+            $r_sql_indiv = "SELECT * FROM individual WHERE id=:res_id";
+            $r_select_indiv = $conn->prepare($r_sql_indiv);
+            $r_select_indiv->execute(['res_id' => $rid]);
+            $r_indiv = $r_select_indiv->fetch();
+            $r_id = $r_indiv['id'];
+            $r_name = $r_indiv['name'];
 
             $restore = "UPDATE individual SET deleted = 0 WHERE id=:id";
             $restore_indiv = $conn->prepare($restore);
             $restore_indiv->execute(['id' => $rid]);
-            echo "<em>$name (ID $id) has been restored.</em><br><br>";
+            echo "<em>$r_name (ID $r_id) has been restored.</em><br><br>";
         }        
 
         //* Show all records
         // Define & Execute query, fetch data from DB for all table rows
-        $sql = 'SELECT individual.id, individual.name as iname, individual.sex, individual.birthyear, individual.age, population.name as pname, individual.deleted
+        $r_sql = 'SELECT individual.id, individual.name as iname, individual.sex, individual.birthyear, individual.age, population.name as pname, individual.deleted
             FROM individual
             LEFT JOIN population ON individual.id_population = population.id 
             WHERE individual.deleted=1
             LIMIT 15';	
-        $query = $conn->prepare($sql);
-        $query->execute();
+        $r_query = $conn->prepare($r_sql);
+        $r_query->execute();
 
         //Error message MySQL 
-        if ( $query->errorCode() > 0 ){
-            $fehler=$query->errorInfo();
-            echo "$fehler[2]";
+        if ( $r_query->errorCode() > 0 ){
+            $r_fehler=$r_query->errorInfo();
+            echo "$r_fehler[2]";
             exit;
         }
     
@@ -43,6 +43,7 @@
         echo "Extract of <strong>removed</strong> records in the individuals table: <br>";  
         echo "<table border='1'>	
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Sex</th>
             <th>Year of birth</th>
@@ -52,24 +53,25 @@
             <th>Edit</th>
         </tr>";
 
-        while($row=$query->fetch()){
-        $id		= $row['id'];
-        $name     = $row['iname'];
-        $sex      = $row['sex'];
-        $year     = $row['birthyear'];
-        $age      = date("Y") - $year;
-        $pop      = $row['pname'];
-        $del      = $row['deleted'];
+        while($row=$r_query->fetch()){
+        $r_id		= $row['id'];
+        $r_name     = $row['iname'];
+        $r_sex      = $row['sex'];
+        $r_year     = $row['birthyear'];
+        $r_age      = date("Y") - $r_year;
+        $r_pop      = $row['pname'];
+        $r_del      = $row['deleted'];
 
         echo "<tr>
-                <td>$name</td>
-                <td>$sex</td>
-                <td>$year</td>
-                <td>$age</td>
-                <td>$pop</td>
-                <td>$del</td>
+                <td>$r_id</td>
+                <td>$r_name</td>
+                <td>$r_sex</td>
+                <td>$r_year</td>
+                <td>$r_age</td>
+                <td>$r_pop</td>
+                <td>$r_del</td>
                 <td>
-                    <a href='$php_self?res_id=$id> restore</a> 
+                    <a href='$php_self?res_id=$r_id'> restore</a> 
                 </td>
                 </tr>";
         }	
