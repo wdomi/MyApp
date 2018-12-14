@@ -13,9 +13,10 @@ git push --set-upstream https://github.com/wdomi/XAMPP_configFiles.git master
 cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/beispiele
 git push --set-upstream https://github.com/wdomi/Besipiel.git master
 
-#° Pedigree
-cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pedigree
-git push --set-upstream https://github.com/wdomi/Pedigree.git master
+#° d3demo
+cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/d3demo
+git push --set-upstream https://github.com/wdomi/d3demo.git master
+
 
 # #! PULL <--- 
 # #° MyApp
@@ -30,10 +31,9 @@ git push --set-upstream https://github.com/wdomi/Pedigree.git master
 # cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/beispiele
 # git pull https://github.com/wdomi/Besipiel.git
 
-# #° Pedigree
-# cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pedigree
-# git pull https://github.com/wdomi/Pedigree.git
-
+# #° d3demo
+# cd /Users/domiadmin/.bitnami/stackman/machines/xampp/volumes/root/htdocs/d3demo
+# git pull https://github.com/wdomi/d3demo.git
 
 
 
